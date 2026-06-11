@@ -1,11 +1,18 @@
 
 #pacotes e funcao para conferir se esta instalado
 
-pkgs <- c(  "ggplot2", "dplyr", "tibble", "GGally", "cluster","factoextra", "dendextend", "mclust", "patchwork")
-invisible(lapply(pkgs, function(p) {
-  if (!requireNamespace(p, quietly = TRUE)) install.packages(p)
-  suppressPackageStartupMessages(library(p, character.only = TRUE))
-}))
+install.packages(c("mclust", "cluster", "factoextra",
+                   "dendextend", "ggplot2", "GGally"))
+library(ggplot2)
+library(dplyr)
+library(tibble)
+library(GGally)
+library(cluster)
+library(factoextra)
+library(dendextend)
+library(mclust)
+library(patchwork)
+
 
 
 #ajustes
